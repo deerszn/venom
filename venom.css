@@ -8,10 +8,7 @@ html {
   line-height:1.5;
 }
 
-body {
-  margin:0;
-  padding:0;
-}
+body { margin:0; padding:0; }
 
 a {
   text-decoration:underline;
@@ -21,15 +18,18 @@ a {
 a:hover { text-decoration:none; }
 
 b, strong { font-weight:bolder; }
+
 small { font-size:80%; }
+
 sub, sup {
   position:relative;
   font-size:75%;
   line-height:0;
   vertical-align:baseline;
 }
-sub { bottom:-0.25rem; }
-sup { top:-0.25rem; }
+  sub { bottom:-0.25rem; }
+  sup { top:-0.25rem; }
+
 q { font-style:italic; }
 
 h1, h2, h3, h4, h5, h6 { margin:1.1rem 0; font-weight:700; line-height:1.1; }
@@ -43,7 +43,7 @@ p { margin:1rem 0; }
 
 ol, ul { margin:1rem 0; }
   ul > ul, ol > ol, ul > ol, ol > ul { margin:0.5rem 0; }
-    li { margin:0.25rem 0 0.25rem -1rem; padding-left:0.25rem; }
+    li { margin:0.25rem 0; margin-left:-1rem; padding-left:0.25rem; }
     ul li { list-style-type:square; }
     ul > ul li, ol > ol li, ul > ol li, ol > ul li { margin-left:-1.5rem; }
 
@@ -77,9 +77,23 @@ input, button, textarea, select { margin:0; font:inherit; }
 
 /* accessibility */
 
-ins { text-decoration:none; font-weight:bolder; }
-abbr[title] { cursor:help; text-decoration:underline; text-decoration:underline dotted; }
-[aria-disabled="true"], [aria-disabled], [disabled] { cursor:not-allowed; pointer-events:none; }
+ins {
+  text-decoration:none;
+  font-weight:bolder;
+}
+
+abbr[title] {
+  cursor:help;
+  text-decoration:underline;
+  text-decoration:underline dotted;
+}
+
+[aria-disabled="true"],
+[aria-disabled],
+[disabled] {
+  cursor:not-allowed;
+  pointer-events:none;
+}
 
 @media(prefers-reduced-motion:reduce) {
 *, ::before, ::after {
