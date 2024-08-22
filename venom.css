@@ -39,12 +39,13 @@ h1, h2, h3, h4, h5, h6 { margin:1.1rem 0; font-weight:700; line-height:1.15; }
   h5, h6 { font-size:1rem; }
 
 ol, ul { margin:1rem 0; }
-  li { margin:0.25rem 0; margin-left:-1rem; padding-left:0.25rem; }
-  ul > ul, ol > ol, ul > ol, ol > ul { margin:0.5rem 0; }
+  li { margin:0.15rem 0; margin-left:-1rem; padding-left:0.25rem; list-style-type:square; }
+  ul > ul, ol > ol, ul > ol, ol > ul { margin:0.25rem 0; }
     ul > ul li, ol > ol li, ul > ol li, ol > ul li { margin-left:-1.5rem; }
 
 dl { margin:1rem 0; }
-  dt { margin:0.5rem 0; font-weight:bold; }
+  dt { margin:0.5rem 0; font-weight:bolder; }
+  dd { margin:0.5rem 1rem; }
   
 details { display:block; }
   summary { display:list-item; }
@@ -67,6 +68,23 @@ hr {
 
 progress {
   vertical-align:baseline;
+}
+
+p:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+ul:first-child,
+ol:first-child {
+  margin-top:0;
+}
+p:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom:0;
 }
 
 /* formatting */
@@ -116,10 +134,11 @@ button, input, optgroup, select, textarea {
 
 /* accessibility */
 
-abbr[title] {
+[title] {
   border-bottom:none;
   text-decoration:underline;
   text-decoration:underline dotted;
+  text-underline-offset:0.25rem;
   cursor:help;
 }
 
