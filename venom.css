@@ -2,11 +2,7 @@
 
 /* general, blocks */
 
-*,
-*::before,
-*::after {
-  box-sizing:border-box;
-}
+*, *::before, *::after { box-sizing:border-box; }
 
 html {
   margin:0;
@@ -27,9 +23,13 @@ main {
   margin:auto;
 }
 
-p {
-  margin:1rem 0;
-}
+p, ol, ul, dl { margin:1rem 0; }
+  ul > ul, ol > ol, ul > ol, ol > ul { margin:0.25rem 0; }
+  li { margin:0.15rem 0; margin-left:-1rem; padding-left:0.25rem; }
+    ul li { list-style-type:square; }
+    ul > ul li, ol > ol li, ul > ol li, ol > ul li { margin-left:-1.5rem; }
+  dt { margin:0.5rem 0; font-weight:bolder; }
+  dd { margin:0.5rem 1rem; }
 
 h1, h2, h3, h4, h5, h6 { margin:1.1rem 0; font-weight:700; line-height:1.15; }
   h1 { font-size:2rem; }
@@ -37,15 +37,6 @@ h1, h2, h3, h4, h5, h6 { margin:1.1rem 0; font-weight:700; line-height:1.15; }
   h3 { font-size:1.5rem; }
   h4 { font-size:1.25rem; }
   h5, h6 { font-size:1rem; }
-
-ol, ul { margin:1rem 0; }
-  li { margin:0.15rem 0; margin-left:-1rem; padding-left:0.25rem; list-style-type:square; }
-  ul > ul, ol > ol, ul > ol, ol > ul { margin:0.25rem 0; }
-    ul > ul li, ol > ol li, ul > ol li, ol > ul li { margin-left:-1.5rem; }
-
-dl { margin:1rem 0; }
-  dt { margin:0.5rem 0; font-weight:bolder; }
-  dd { margin:0.5rem 1rem; }
   
 details { display:block; }
   summary { display:list-item; }
@@ -66,36 +57,24 @@ hr {
   overflow:visible;
 }
 
-progress {
-  vertical-align:baseline;
-}
+progress { vertical-align:baseline; }
 
 p:first-child,
-h1:first-child,
-h2:first-child,
-h3:first-child,
-ul:first-child,
-ol:first-child {
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
+ul:first-child, ol:first-child {
   margin-top:0;
 }
 p:last-child,
-h1:last-child,
-h2:last-child,
-h3:last-child,
-ul:last-child,
-ol:last-child {
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child,
+ul:last-child, ol:last-child {
   margin-bottom:0;
 }
 
 /* formatting */
 
-b, strong {
-  font-weight:bolder;
-}
+b, strong { font-weight:bolder; }
 
-small {
-  font-size:80%;
-}
+small { font-size:80%; }
 
 sub, sup {
   position:relative;
